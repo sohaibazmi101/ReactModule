@@ -1,0 +1,9 @@
+*{
+  padding: 1px;
+  margin: 1;
+}
+
+.container{
+  align-items: center;
+  justify-content: center;
+}
