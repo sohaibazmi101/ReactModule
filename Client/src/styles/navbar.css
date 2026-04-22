@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+}
+
+.logo{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links a{
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.nav-links a:hover{
+    color: bisque;
+    font-size: 18px;
+}
+
+.theme-btn{
+    padding: 12px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 18px;
+    border: none;
+    font-size: 15px;
+}
+.theme-btn:hover{
+    padding: 15px;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 18px;
+}

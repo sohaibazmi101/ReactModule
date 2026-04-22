@@ -1,16 +1,32 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 function ToDo() {
+  const {theme, toggleTheme} = useContext(ThemeContext);
   const [task, setTask] = useState("");
-  const [tasks, setTasks] = useState([]);
-  const [deletedTasks, setDeletedTask] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+    const saved = JSON.parse(localStorage.getItem("tasks"));
+    return saved || [];
+  });
+  const [deletedTasks, setDeletedTask] = useState(() => {
+    const deleted = JSON.parse(localStorage.getItem("deletedTasks"));
+    return deleted || [];
+  });
 
   function handleAddTask() {
     if (task.trim() === "") return;
 
     setTasks([...tasks, { text: task, done: false }]);
-    setTask(""); // ✅ fixed
+    setTask("");
   }
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem("deletedTasks", JSON.stringify(deletedTasks));
+  }, [deletedTasks]);
 
   function handleDelete(indexToDelete) {
     const taskToMove = tasks[indexToDelete];
@@ -27,27 +43,30 @@ function ToDo() {
     if (!newTask || newTask.trim() === "") return;
 
     const updatedTasks = tasks.map((t, i) =>
-      i === index ? { ...t, text: newTask } : t // ✅ fixed
+      i === index ? { ...t, text: newTask } : t
     );
 
     setTasks(updatedTasks);
   }
 
   function clearTask() {
-    setTasks([]);        // ✅ fixed
-    setDeletedTask([]);  // ✅ fixed
+    setTasks([]);
+    setDeletedTask([]);
   }
 
   function handleToggle(index) {
     const updatedTask = tasks.map((t, i) =>
-      i === index ? { ...t, done: !t.done } : t // ✅ fixed
+      i === index ? { ...t, done: !t.done } : t
     );
 
     setTasks(updatedTask);
   }
 
   return (
-    <div className="container">
+    <div className={theme}>
+      <button onClick={toggleTheme}>
+        {theme == "light"?"Swith to Dark":"swith to light"}
+      </button>
       <h1>Todo App</h1>
 
       <input
@@ -96,7 +115,7 @@ function ToDo() {
         {deletedTasks.length > 0 ? (
           <ul>
             {deletedTasks.map((t, index) => (
-              <li key={index}>{t.text}</li> // ✅ fixed
+              <li key={index}>{t.text}</li>
             ))}
           </ul>
         ) : (

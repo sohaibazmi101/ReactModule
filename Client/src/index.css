@@ -1,9 +1,19 @@
 *{
-  padding: 1px;
-  margin: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .container{
   align-items: center;
   justify-content: center;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: #180303;
+  color: white;
 }

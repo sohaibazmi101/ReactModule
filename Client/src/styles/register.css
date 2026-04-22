@@ -1,0 +1,38 @@
+.register{
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.register h1{
+    text-align: center;
+}
+
+.register form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: bisque;
+    border-radius: 20px;
+    border: 2px solid blue;
+}
+
+.register input{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid blue;
+}
+
+.register button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: blueviolet;
+    color: white;
+}
