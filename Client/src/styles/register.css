@@ -36,3 +36,29 @@
     background-color: blueviolet;
     color: white;
 }
+
+.changer{
+    font-size: 18px;
+    background-color: rgb(177, 177, 228);
+    padding: 4px;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+}
+
+.changer:hover{
+    background-color: rgb(3, 3, 247);
+    color: white;
+    border: 1px solid white;
+}
+
+.check-changer{
+    text-align: center;
+}
+
+.register-error{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+    padding: 18px;
+}

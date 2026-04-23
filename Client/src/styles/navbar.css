@@ -15,14 +15,21 @@
 
 .nav-links a{
     margin-left: 15px;
+    padding: 4px;
     text-decoration: none;
     color: white;
     font-weight: 500;
 }
 
+.nav-links{
+    padding-right: 30px;
+}
+
 .nav-links a:hover{
-    color: bisque;
-    font-size: 18px;
+    padding: 4px;
+    color: rgb(6, 5, 6);
+    background-color: rgb(213, 225, 101);
+    border-radius: 6px;
 }
 
 .theme-btn{
@@ -34,8 +41,16 @@
     font-size: 15px;
 }
 .theme-btn:hover{
-    padding: 15px;
-    background-color: blue;
-    color: aliceblue;
-    font-size: 18px;
+    background-color: rgb(233, 233, 240);
+    color: rgb(4, 41, 72);
+}
+
+.login-link{
+    background-color: rgb(127, 127, 199);
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.login-link:hover{
+    background-color: rgb(115, 198, 187);
 }

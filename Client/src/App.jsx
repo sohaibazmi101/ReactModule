@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import ToDo from "./pages/ToDo";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
+import TextGenerator from "./pages/TextGenerator";
 
 function App() {
 
@@ -17,7 +18,6 @@ function App() {
       className={theme}
       style={{ minHeight: "100vh" }}
     >
-      <Router>
         <Navbar />
 
         {/* 🔹 Routes */}
@@ -26,8 +26,8 @@ function App() {
           <Route path="/todo" element={<ToDo />} />
           <Route path="/register" element={<Register />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/text-generator" element={<TextGenerator />} />
         </Routes>
-      </Router>
     </div>
   );
 }

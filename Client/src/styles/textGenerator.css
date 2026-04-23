@@ -1,0 +1,24 @@
+.output {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background: #4f46e5;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+}
+
+.ai-msg {
+    align-self: flex-start;
+    background: #e5e7eb;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 60%;
+}
